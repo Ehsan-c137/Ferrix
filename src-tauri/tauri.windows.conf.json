@@ -13,7 +13,7 @@
         "resizable": true,
         "fullscreen": false,
         "center": true,
-        "shadow": false,
+        "shadow": true,
         "windowEffects": {
           "effects": ["acrylic"]
         }
