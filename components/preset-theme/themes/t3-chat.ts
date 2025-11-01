@@ -36,7 +36,6 @@ export const t3Chat = {
       'sidebar-accent-foreground': '#454554',
       'sidebar-border': '#eceae9',
       'sidebar-ring': '#db2777',
-      radius: '0.5rem',
     },
     dark: {
       background: '#221d27',

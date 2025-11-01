@@ -35,7 +35,6 @@ export const claude = {
       'sidebar-accent-foreground': '#343434',
       'sidebar-border': '#ebebeb',
       'sidebar-ring': '#b5b5b5',
-      radius: '0.5rem',
     },
     dark: {
       background: '#262624',

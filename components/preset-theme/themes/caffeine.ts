@@ -35,7 +35,6 @@ export const caffeine = {
       'sidebar-accent-foreground': '#343434',
       'sidebar-border': '#ebebeb',
       'sidebar-ring': '#b5b5b5',
-      radius: '0.5rem',
     },
     dark: {
       background: '#111111',
@@ -71,7 +70,6 @@ export const caffeine = {
       'sidebar-accent-foreground': '#f4f4f5',
       'sidebar-border': '#27272a',
       'sidebar-ring': '#d4d4d8',
-      radius: '0.5rem',
     },
   },
 };

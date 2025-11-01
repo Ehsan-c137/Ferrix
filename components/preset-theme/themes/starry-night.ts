@@ -36,8 +36,6 @@ export const starryNight = {
       'sidebar-accent-foreground': '#1a2238',
       'sidebar-border': '#b0b8c1',
       'sidebar-ring': '#f7c873',
-      'font-sans': 'Libre Baskerville, serif',
-      radius: '0.5rem',
     },
     dark: {
       background: '#181a24',
@@ -73,7 +71,6 @@ export const starryNight = {
       'sidebar-accent-foreground': '#23243a',
       'sidebar-border': '#2d2e3e',
       'sidebar-ring': '#ffe066',
-      radius: '0.5rem',
     },
   },
 };
