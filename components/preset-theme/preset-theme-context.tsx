@@ -6,7 +6,7 @@ import {
   useContext,
   useState,
   useMemo,
-  useLayoutEffect,
+  useInsertionEffect,
   useCallback,
   useRef,
 } from 'react';
@@ -65,7 +65,7 @@ export function PresetsThemeProvider({ children }: { children: React.ReactNode }
   const [tempPreset, setTempPreset] = useState<ThemeName | null>(null);
   const latestRequest = useRef<string | null>(null);
 
-  useLayoutEffect(() => {
+  useInsertionEffect(() => {
     const currentPreset = preset;
     latestRequest.current = currentPreset;
 
