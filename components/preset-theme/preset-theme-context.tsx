@@ -61,6 +61,7 @@ export function PresetsThemeProvider({ children }: { children: React.ReactNode }
     }
     return 'default';
   };
+
   const [preset, setPreset] = useState<ThemeName>(getLocalPreset);
   const [tempPreset, setTempPreset] = useState<ThemeName | null>(null);
   const latestRequest = useRef<string | null>(null);
@@ -104,20 +105,23 @@ export function PresetsThemeProvider({ children }: { children: React.ReactNode }
     [removeTempPreset],
   );
 
-  const addTempPreset = useCallback(async (presetName: ThemeName) => {
-    if (!presetName || presetName === tempPreset) return;
-    setTempPreset(presetName);
-    latestRequest.current = presetName;
+  const addTempPreset = useCallback(
+    async (presetName: ThemeName) => {
+      if (!presetName || presetName === tempPreset) return;
+      setTempPreset(presetName);
+      latestRequest.current = presetName;
 
-    try {
-      const theme = await loadTheme(presetName);
-      if (latestRequest.current === presetName) {
-        applyCss(themePresetToCss(theme), tempStyleTagId);
+      try {
+        const theme = await loadTheme(presetName);
+        if (latestRequest.current === presetName) {
+          applyCss(themePresetToCss(theme), tempStyleTagId);
+        }
+      } catch (error) {
+        console.error(`Failed to load temporary theme: ${presetName}`, error);
       }
-    } catch (error) {
-      console.error(`Failed to load temporary theme: ${presetName}`, error);
-    }
-  }, []);
+    },
+    [tempPreset],
+  );
 
   const value = useMemo(
     () => ({
